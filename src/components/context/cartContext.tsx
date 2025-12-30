@@ -23,7 +23,9 @@ export default function CartContextProvider({ children }: { children: ReactNode 
 
   async function getCart() {
     setLoading(true);
-   const response=await fetch("http://localhost:3000/api/get_cart")
+  //  const response=await fetch("http://localhost:3000/api/get_cart")
+  const response = await fetch("/api/get_cart")
+
    const data: CartResponse = await response.json();
 
     setCartData(data);
