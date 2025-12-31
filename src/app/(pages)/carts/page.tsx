@@ -95,6 +95,7 @@ export default  function Cart() {
 
     if (data.message === "success") {
       setCartData(null);
+      getCart()
     }
 
     setIsClear(false)
